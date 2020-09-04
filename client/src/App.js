@@ -4,14 +4,19 @@ import {
   Route
 } from 'react-router-dom'
 
+import GlobalStyle from './globalStyles'
+
 import JoinPage from './pages/JoinPage/JoinPage'
 import ChatPage from './pages/ChatPage/ChatPage'
 
 const App = () => (
-  <Router>
-    <Route path={'/'} exact component={JoinPage}/>
-    <Route path={'/chat'} exact component={ChatPage}/>
-  </Router>
+  <React.Fragment>
+    <GlobalStyle />
+    <Router>
+      <Route path={'/'} exact component={JoinPage}/>
+      <Route path={'/chat'} exact component={ChatPage}/>
+    </Router>
+  </React.Fragment>
 )
 
 export default App
