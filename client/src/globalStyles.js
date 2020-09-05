@@ -15,6 +15,12 @@ const GlobalStyle = createGlobalStyle`
   #root {
     height: 100vh;
   }
+
+  input, textarea, select {
+    &::focus {
+      outline: none;
+    }
+  }
 `
  
 export default GlobalStyle
