@@ -9,10 +9,10 @@ import {
 } from './MessageBox.styles'
 
 const MessageBox = ({ messages, username }) => (
-  <ScrollToBottom className="messages">
+  <ScrollToBottom>
     {messages.map(
-      (message, i) => (
-        <MessageBoxContainer key={message.id}>
+      (message, index) => (
+        <MessageBoxContainer key={index}>
           <MessageText message={message} username={username}/>
         </MessageBoxContainer>
       ))}

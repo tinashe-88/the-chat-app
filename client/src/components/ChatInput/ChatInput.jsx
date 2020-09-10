@@ -1,8 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import io from 'socket.io-client'
-import queryString from 'query-string'
-
-import InfoBar from '../../components/InfoBar/InfoBar.jsx'
+import React from 'react'
 
 import {
   FormContainer,
@@ -14,7 +10,7 @@ const ChatInput = ({ setMessageText, sendMessage, messageText}) => {
   
   return (
     <React.Fragment>
-      <form action="">
+      <FormContainer>
         <InputStyles
           type="text"
           placeholder="Type your message..."
@@ -30,7 +26,7 @@ const ChatInput = ({ setMessageText, sendMessage, messageText}) => {
         >
           Send
         </ButtonStyles>
-      </form>
+      </FormContainer>
     </React.Fragment>
   )
 }
